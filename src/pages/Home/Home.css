@@ -1,0 +1,16 @@
+ion-title.title-home {
+    font-size: 22px;
+}
+
+.header-container {
+    --background: #9E0043 !important;
+    --color: white;
+
+    --border-color: #f24aec;
+    --border-width: 4px 0;
+    --border-style: double;
+
+    --min-height: 60px;
+    --padding-top: 5px;
+    --padding-bottom: 5px;
+}

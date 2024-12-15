@@ -1,0 +1,7 @@
+{
+  "name": "store-main-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
