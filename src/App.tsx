@@ -9,12 +9,7 @@ import {
   IonTabs,
   setupIonicReact
 } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, home, square, triangle } from 'ionicons/icons';
-import HomePage from './pages/Home/Home';
-import FavoritesPage from './pages/Favorites/Favorites';
-import * as TEXT from './utils/text';
-import * as ROUTES from './utils/routes';
+
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -45,13 +40,22 @@ import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
+
+import { IonReactRouter } from '@ionic/react-router';
+import { ellipse, home, square, triangle } from 'ionicons/icons';
+import HomePage from './pages/Home/Home';
+import FavoritesPage from './pages/Favorites/Favorites';
+import * as TEXT from './utils/text';
+import * as ROUTES from './utils/routes';
 import CategoryPage from './pages/Category/Category';
+import ProductPage from './pages/Product/Product';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
+
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path={ROUTES.ROUTES_HOME}>
@@ -63,6 +67,11 @@ const App: React.FC = () => (
           <Route exact path={ROUTES.ROUTES_CATEGORY_ID}>
             <CategoryPage />
           </Route>
+
+          <Route exact path={ROUTES.ROUTES_PRODUCT_ID}>
+            <ProductPage />
+          </Route>
+
           <Route exact path="/">
             <Redirect to={ROUTES.ROUTES_HOME} />
           </Route>

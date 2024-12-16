@@ -26,7 +26,7 @@ const ProductCategyItem = ({ product, onClick }: ProductCategyItemProps) => {
             >
                 {product.images.map((image) => (
                     <SwiperSlide key={image}>
-                        <img src={image} alt={product.title} />
+                        <img src={image} alt={product.title} onClick={() => handleOnClick(product.id)} />
                     </SwiperSlide>
                 ))}
 

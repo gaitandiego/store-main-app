@@ -7,3 +7,5 @@ export const TITLE_CATEGORY = "Category"
 
 export const LOADING = 'Loading...'
 export const NOT_PRODUCTS = 'There are no products'
+
+export const DESCRIPTION = "Description"
