@@ -1,5 +1,5 @@
 import React from 'react'
-import { Product } from '../interfaces/productsInterface'
+import { Product } from '../../interfaces/productsInterface'
 import { IonCard, IonImg } from '@ionic/react'
 import './ProductCardSlide.css'
 

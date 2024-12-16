@@ -2,7 +2,7 @@ import { IonCard, IonCol, IonContent, IonGrid, IonHeader, IonicSlides, IonPage, 
 import './Home.css';
 import { Product } from '../../interfaces/productsInterface';
 import { useState } from 'react';
-import { API_URL_CATEGORIES, API_URL_PRUDUCTS_LIMIT } from '../../utils/api';
+import { API_URL_CATEGORIES, API_URL_CATEGORIES_LIMIT, API_URL_PRUDUCTS_LIMIT } from '../../utils/api';
 import { Category } from '../../interfaces/categoryInterface';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Keyboard, Pagination, Scrollbar, Zoom } from 'swiper/modules';
@@ -42,7 +42,7 @@ const Home: React.FC = () => {
 
     const fecthCategories = async () => {
       try {
-        const response = await fetch(API_URL_CATEGORIES);
+        const response = await fetch(API_URL_CATEGORIES_LIMIT);
         const data = await response.json();
         setCategories(data);
       } catch (error) {
