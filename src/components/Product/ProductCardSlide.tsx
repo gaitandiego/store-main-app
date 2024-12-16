@@ -10,7 +10,7 @@ interface ProductCardSlideProps {
 const ProductCardSlide = ({ product }: ProductCardSlideProps) => {
     return (
         <IonCard className='card-container'>
-            <IonImg className="card-image" src={product.images[0]} alt={product.title} onError={(e) => {
+            <img className="card-image" src={product.images[0]} alt={product.title} onError={(e) => {
                 e.currentTarget.src = fallbackImage;
                 e.currentTarget.alt = "Image not available";
             }} />

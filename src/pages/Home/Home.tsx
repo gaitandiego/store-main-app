@@ -90,7 +90,7 @@ const Home: React.FC = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <IonHeader collapse="condense">
+        <IonHeader>
           <IonToolbar >
             <IonTitle size="large" className='title-home'>{TEXT.CATEGORIES}</IonTitle>
           </IonToolbar>
