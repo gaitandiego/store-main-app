@@ -19,3 +19,7 @@ http://ionicframework.com/docs/theming/ */
     --color-selected: #9E0043;
     /* Cambia el color del texto cuando está seleccionado */
 }
+
+ion-header {
+    box-shadow: none !important;
+}
