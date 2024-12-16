@@ -1,7 +1,6 @@
-import React from 'react'
-import { Product } from '../../interfaces/productsInterface'
 import { IonCard, IonImg } from '@ionic/react'
 import './ProductGallery.css'
+import fallbackImage from '../../assets/images/fallback-image.png'
 
 interface ProductGalleryProps {
     image: string
@@ -10,7 +9,10 @@ interface ProductGalleryProps {
 const ProductGallery = ({ image }: ProductGalleryProps) => {
     return (
         <IonCard className='card-product-container'>
-            <IonImg className="card-product-image" src={image} />
+            <img className="card-product-image" src={image} onError={(e) => {
+                e.currentTarget.src = fallbackImage;
+                e.currentTarget.alt = "Image not available";
+            }} />
         </IonCard>
     )
 }

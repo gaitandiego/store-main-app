@@ -7,6 +7,7 @@ import { trash } from 'ionicons/icons';
 import { useHistory } from 'react-router';
 import { Product } from '../../interfaces/productsInterface';
 import * as ROUTES from '../../utils/routes';
+import fallbackImage from '../../assets/images/fallback-image.png';
 
 const Favorites = () => {
   const { favorites, removeFromFavorites } = useContext(FavoritesContext);
@@ -62,7 +63,10 @@ const Favorites = () => {
         <IonList >
           {sortedFavorites.map((favorite) => (
             <IonItem key={favorite.id} >
-              <IonImg src={favorite.images[0]} className='favorites-container-image' onClick={() => handleSelectProduct(favorite.id)} />
+              <img src={favorite.images[0]} className='favorites-container-image' onClick={() => handleSelectProduct(favorite.id)} onError={(e) => {
+                e.currentTarget.src = fallbackImage;
+                e.currentTarget.alt = "Image not available";
+              }} />
               <IonLabel onClick={() => handleSelectProduct(favorite.id)} className='favorites-container-title'>{favorite.title}</IonLabel>
               <IonLabel slot='end' className='favorites-container-price'>${favorite.price}</IonLabel>
               <IonButton color='danger' fill='clear' slot='end' className='button-delete' onClick={() => handleRemoveFavorite(favorite)}>

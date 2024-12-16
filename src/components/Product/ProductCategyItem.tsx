@@ -1,5 +1,3 @@
-import React from 'react'
-import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonicSlides } from '@ionic/react'
 import { Product } from '../../interfaces/productsInterface'
 import './ProductCategoryItem.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -8,6 +6,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import '@ionic/react/css/ionic-swiper.css';
 import 'swiper/css/navigation';
+import fallbackImage from '../../assets/images/fallback-image.png';
 
 interface ProductCategyItemProps {
     product: Product,
@@ -26,7 +25,11 @@ const ProductCategyItem = ({ product, onClick }: ProductCategyItemProps) => {
             >
                 {product.images.map((image) => (
                     <SwiperSlide key={image}>
-                        <img src={image} alt={product.title} onClick={() => handleOnClick(product.id)} />
+                        <img src={image} alt={product.title} onClick={() => handleOnClick(product.id)}
+                            onError={(e) => {
+                                e.currentTarget.src = fallbackImage;
+                                e.currentTarget.alt = "Image not available";
+                            }} />
                     </SwiperSlide>
                 ))}
 

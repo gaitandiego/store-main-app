@@ -2,6 +2,7 @@ import { IonButton, IonCard, IonCol } from '@ionic/react'
 import React from 'react'
 import { Category } from '../../interfaces/categoryInterface';
 import './CategoryCardHome.css'
+import fallbackImage from '../../assets/images/fallback-image.png';
 
 interface CategoryCardHomeProps {
     category: Category,
@@ -14,7 +15,10 @@ const CategoryCardHome = ({ category, onClick }: CategoryCardHomeProps) => {
     return (
         <IonCol size="3" key={category.id} onClick={() => handleClick(category.id)}>
             <div className='category-card'>
-                <img src={category.image} alt={category.name} />
+                <img src={category.image} alt={category.name} onError={(e) => {
+                    e.currentTarget.src = fallbackImage;
+                    e.currentTarget.alt = "Image not available";
+                }} />
                 <p>{category.name}</p>
             </div>
         </IonCol>
