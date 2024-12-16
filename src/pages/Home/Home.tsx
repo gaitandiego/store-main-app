@@ -21,12 +21,13 @@ import * as TEXT from '../../utils/text';
 import * as ROUTES from '../../utils/routes';
 import CategoryCardHome from '../../components/Category/CategoryCardHome';
 import { useHistory } from 'react-router';
-
+import { useIonToast } from '@ionic/react';
 const Home: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
 
   const history = useHistory();
+  const [present] = useIonToast();
 
   useIonViewDidEnter(() => {
     const fecthProducts = async () => {
@@ -36,6 +37,11 @@ const Home: React.FC = () => {
         setProducts(data);
       } catch (error) {
         console.log(error)
+        present({
+          message: TEXT.ERROR_FETCHING_DATA,
+          duration: 4500,
+          position: 'top',
+        });
       }
     }
     fecthProducts();
@@ -47,7 +53,11 @@ const Home: React.FC = () => {
         setCategories(data);
       } catch (error) {
         console.log(error)
-
+        present({
+          message: TEXT.ERROR_FETCHING_DATA,
+          duration: 4500,
+          position: 'top',
+        });
       }
 
     }

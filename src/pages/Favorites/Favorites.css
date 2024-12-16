@@ -1,0 +1,41 @@
+.title-favorites {
+    font-size: 22px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.favorites-container .favorites-container-image {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 10px;
+}
+
+.favorites-container .button-delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.favorites-container .button-delete ion-icon {
+    color: #9E0043;
+    z-index: 100;
+}
+
+.favorites-container .sort-options-container {
+    margin: 0 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.favorites-container-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px !important;
+    color: #9E0043 !important;
+    font-weight: bold;
+}

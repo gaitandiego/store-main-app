@@ -9,5 +9,6 @@ export interface Product {
     creationAt: Date;
     updatedAt: Date;
     category: Category;
+    dateAdd?: Date;
 }
 

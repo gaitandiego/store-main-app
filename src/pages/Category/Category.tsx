@@ -27,7 +27,9 @@ const Category = () => {
             try {
                 const response = await fetch(`${API_URL_CATEGORIES}/${params?.id}`);
                 const data = await response.json();
-                setCategory(data);
+                if (response.status === 200) {
+                    setCategory(data);
+                }
             } catch (error) {
                 console.log(error)
             }
@@ -38,8 +40,10 @@ const Category = () => {
             try {
                 const response = await fetch(`${API_URL_CATEGORIES}/${params?.id}/products`);
                 const data = await response.json();
-                setProducts(data)
-                setLoading(false)
+                if (response.status === 200) {
+                    setProducts(data)
+                }
+
             } catch (error) {
                 console.log(error)
 
@@ -87,7 +91,7 @@ const Category = () => {
                 </IonHeader>
                 <IonGrid>
                     <IonRow>
-                        {products.map((product) => (
+                        {products?.map((product) => (
                             <IonCol size="4" key={product.id}>
                                 <ProductCategyItem key={product.id} product={product} onClick={(id) => handleClickProduct(id)} />
                             </IonCol>

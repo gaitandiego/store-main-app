@@ -1,2 +1,21 @@
 /* For information on how to create your own theme, please see:
 http://ionicframework.com/docs/theming/ */
+.header-container {
+    --background: #9E0043 !important;
+    --color: white;
+
+    --border-color: #9E0043;
+    --border-width: 4px 0;
+    --border-style: double;
+
+    --min-height: 60px;
+    --padding-top: 5px;
+    --padding-bottom: 5px;
+}
+
+.custom-tab {
+    --color: #000000;
+    /* Cambia el color del texto */
+    --color-selected: #9E0043;
+    /* Cambia el color del texto cuando está seleccionado */
+}
