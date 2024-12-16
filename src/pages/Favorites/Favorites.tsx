@@ -38,12 +38,12 @@ const Favorites = () => {
   return (
     <IonPage>
       <IonContent fullscreen className='favorites-container'>
-        <IonHeader collapse="condense" >
+        <IonHeader  >
           <IonToolbar className='header-container'>
             <IonTitle>{TEXT.TITLE_APP}</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonHeader collapse="condense">
+        <IonHeader >
           <IonToolbar >
             <IonTitle size="large" className='title-favorites'>{TEXT.LIST_FAVORITES}</IonTitle>
           </IonToolbar>

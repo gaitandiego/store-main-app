@@ -71,7 +71,7 @@ const Home: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
-        <IonHeader collapse="condense" >
+        <IonHeader  >
           <IonToolbar className='header-container'>
             <IonTitle>{TEXT.TITLE_APP}</IonTitle>
           </IonToolbar>

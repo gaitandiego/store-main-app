@@ -53,7 +53,7 @@ const ProductPage = () => {
     return (
         <IonPage className='product-page'>
             <IonContent fullscreen>
-                <IonHeader collapse="condense">
+                <IonHeader >
                     <IonToolbar className='header-container'>
                         <IonIcon slot="start" size='large' icon={arrowBackOutline} onClick={handleBack} />
                         <IonTitle>{product?.title}</IonTitle>

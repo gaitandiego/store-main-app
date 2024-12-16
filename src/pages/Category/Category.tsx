@@ -79,7 +79,7 @@ const Category = () => {
 
         <IonPage>
             <IonContent fullscreen>
-                <IonHeader collapse="condense" >
+                <IonHeader  >
                     <IonToolbar className='header-container'>
                         <IonIcon slot="start" size='large' icon={arrowBackOutline} onClick={handleBack} />
                         <IonTitle>{category?.name}</IonTitle>
