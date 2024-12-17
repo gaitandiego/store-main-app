@@ -71,6 +71,7 @@ const Category = () => {
             const response = await fetch(`${API_URL_PRODUCTS}/?title=${value}&categoryId=${params?.id}`);
             const data = await response.json();
             setProducts(data)
+
         } catch (error) {
             console.log(error)
         }

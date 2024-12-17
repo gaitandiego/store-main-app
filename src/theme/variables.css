@@ -15,11 +15,14 @@ http://ionicframework.com/docs/theming/ */
 
 .custom-tab {
     --color: #000000;
-    /* Cambia el color del texto */
     --color-selected: #9E0043;
-    /* Cambia el color del texto cuando está seleccionado */
 }
 
 ion-header {
     box-shadow: none !important;
+}
+
+ion-toolbar {
+    --background: #fff;
+    --border-color: #fff;
 }
