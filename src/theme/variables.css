@@ -1,5 +1,10 @@
 /* For information on how to create your own theme, please see:
 http://ionicframework.com/docs/theming/ */
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
 .header-container {
     --background: #9E0043 !important;
     --color: white;
@@ -18,8 +23,9 @@ http://ionicframework.com/docs/theming/ */
     --color-selected: #9E0043;
 }
 
-ion-header {
-    box-shadow: none !important;
+
+.custom-tab .icon-heart {
+    color: yellow;
 }
 
 ion-toolbar {

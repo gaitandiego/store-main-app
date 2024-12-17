@@ -4,6 +4,7 @@
     white-space: nowrap;
     overflow: hidden;
     width: 100%;
+    /* border: 1px solid blue; */
 }
 
 .category-card p {

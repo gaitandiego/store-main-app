@@ -83,8 +83,8 @@ const App: React.FC = () => (
               <IonIcon aria-hidden="true" icon={home} />
               <IonLabel>{TEXT.MENU_HOME}</IonLabel>
             </IonTabButton>
-            <IonTabButton tab="tab2" href={ROUTES.ROUTES_FAVORITES} className="custom-tab">
-              <IonIcon aria-hidden="true" icon={heart} />
+            <IonTabButton tab="tab2" href={ROUTES.ROUTES_FAVORITES} className="custom-tab ">
+              <IonIcon aria-hidden="true" icon={heart} className='icon-heart' />
               <IonLabel>{TEXT.MENU_FAVORITES}</IonLabel>
             </IonTabButton>
           </IonTabBar>
