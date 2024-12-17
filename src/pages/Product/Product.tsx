@@ -98,13 +98,24 @@ const ProductPage = () => {
                                         <h3>${product?.price}</h3>
 
                                     </IonCol>
-                                    <IonCol>
-                                        <IonButton onClick={handleAddFavorites} shape="round" className={`${isFavorite ? "button-icon-favorite-active" : "button-icon-favorite"}`} >
-                                            <div className="icon-border">
-                                                <IonIcon slot="icon-only" icon={heart}></IonIcon>
-                                            </div>
+                                    <IonCol >
+                                        <div className='button-container-favorite'>
+                                            <IonButton
+                                                size='large'
+                                                onClick={handleAddFavorites}
+                                                shape="round"
+                                                className={`${isFavorite
+                                                    ? "button-icon-favorite-active"
+                                                    : "button-icon-favorite"
+                                                    }`}
+                                            >
+                                                <div className="icon-border">
+                                                    <IonIcon size='large' slot="icon-only" icon={heart}></IonIcon>
+                                                </div>
+                                            </IonButton>
+                                        </div>
 
-                                        </IonButton>
+
                                     </IonCol>
                                 </IonRow>
                                 <IonRow>
