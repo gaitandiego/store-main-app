@@ -93,7 +93,7 @@ const Category = () => {
                 <IonGrid>
                     <IonRow>
                         {products?.map((product) => (
-                            <IonCol size="4" key={product.id}>
+                            <IonCol size="4" size-md="2" key={product.id} className='productos-categories-container'>
                                 <ProductCategyItem key={product.id} product={product} onClick={(id) => handleClickProduct(id)} />
                             </IonCol>
                         ))}
