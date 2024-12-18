@@ -80,7 +80,7 @@ const App: React.FC = () => (
           </IonRouterOutlet>
           <IonTabBar slot="bottom">
             <IonTabButton tab="tab1" href={ROUTES.ROUTES_HOME} className="custom-tab">
-              <IonIcon aria-hidden="true" icon={home} />
+              <IonIcon aria-hidden="true" icon={home} className='icon-home' />
               <IonLabel>{TEXT.MENU_HOME}</IonLabel>
             </IonTabButton>
             <IonTabButton tab="tab2" href={ROUTES.ROUTES_FAVORITES} className="custom-tab ">
