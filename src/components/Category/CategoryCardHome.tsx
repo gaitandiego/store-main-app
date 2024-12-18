@@ -13,7 +13,7 @@ interface CategoryCardHomeProps {
 const CategoryCardHome = ({ category, onClick }: CategoryCardHomeProps) => {
     const handleClick = (id: Category['id']) => onClick(id)
     return (
-        <IonCol size="3" key={category.id} onClick={() => handleClick(category.id)}>
+        <IonCol size="3" size-md="2" key={category.id} onClick={() => handleClick(category.id)}>
             <div className='category-card'>
                 <img src={category.image} alt={category.name} onError={(e) => {
                     e.currentTarget.src = fallbackImage;

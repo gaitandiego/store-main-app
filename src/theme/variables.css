@@ -24,15 +24,15 @@ http://ionicframework.com/docs/theming/ */
 }
 
 
-.custom-tab .icon-heart {
+/* .custom-tab .icon-heart {
     color: yellow;
-}
+} */
 
 ion-toolbar {
     --background: #fff;
     --border-color: #fff;
 }
 
-.ion-header {
+ion-header {
     box-shadow: none !important;
 }
